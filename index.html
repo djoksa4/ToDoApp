@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <link rel="stylesheet" href="src/css/main.css" />
+    <script defer type="module" src="src/js/controller.js"></script>
+
+    <title>To-Do App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="input__area">
+        <h1>To-Do List</h2>
+        <form class="add__item">
+          <input
+            type="text"
+            class="add__item--submit"
+            placeholder="Add an item..."
+          />
+          <button class="btn add__btn">ADD</button>
+        </form>
+        <button class="btn clear__btn">Clear list</button>
+      </div>
+
+      <div class="list__area">
+        <ol class="list">
+          <!-- <li>
+            <span>Stuff</span>
+            <button class="btn remove__btn">X</button>
+            <button class="btn done__btn">DONE</button>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
