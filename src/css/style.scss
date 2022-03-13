@@ -1,0 +1,23 @@
+@mixin areaGeneral {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightgray;
+}
+
+.list-area {
+  @include areaGeneral();
+}
+
+.input-area {
+  @include areaGeneral();
+
+  &__form {
+    display: inline-block;
+  }
+}
+
+.btn {
+  display: inline-block;
+}

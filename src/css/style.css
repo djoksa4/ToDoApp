@@ -1,0 +1,24 @@
+.list-area {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightgray;
+}
+
+.input-area {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightgray;
+}
+
+.input-area__form {
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+}
+/*# sourceMappingURL=style.css.map */

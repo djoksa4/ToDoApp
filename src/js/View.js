@@ -1,9 +1,9 @@
 import { strikeThrough } from "./helpers.js";
 
 class View {
-  #formElement = document.querySelector(".add__item");
-  #listElement = document.querySelector(".list");
-  #clearBtn = document.querySelector(".clear__btn");
+  #formElement = document.querySelector(".input-area__form");
+  #listElement = document.querySelector(".list-area__list");
+  #clearBtn = document.querySelector(".input-area__btn--clear");
   #data;
 
   // Publisher - subsriber patterns for event listening
@@ -22,7 +22,7 @@ class View {
     this.#listElement.addEventListener(
       "click",
       function (e) {
-        const btn = e.target.closest(".remove__btn");
+        const btn = e.target.closest(".list-area__btn--remove");
         if (!btn) return;
         const listItem = btn.parentElement;
         this.#listElement.removeChild(listItem);
@@ -32,7 +32,7 @@ class View {
 
   addHandlerDone() {
     this.#listElement.addEventListener("click", function (e) {
-      const btn = e.target.closest(".done__btn");
+      const btn = e.target.closest(".list-area__btn--done");
       if (!btn) return;
       const listItem = btn.parentElement;
       listItem.firstElementChild.textContent = strikeThrough(
@@ -48,12 +48,12 @@ class View {
 
   // Clears the input field
   #clearInput() {
-    this.#formElement.querySelector(".add__item--submit").value = "";
+    this.#formElement.querySelector(".input-area__text").value = "";
   }
 
   // Gets and returns the input field
   qetQuery() {
-    const value = this.#formElement.querySelector(".add__item--submit").value;
+    const value = this.#formElement.querySelector(".input-area__text").value;
     this.#clearInput();
     return value;
   }
@@ -67,10 +67,10 @@ class View {
 
   #generateMarkup() {
     return `
-        <li class="list__item">
+        <li class="list-area__list-item">
             <span>${this.#data}</span>
-            <button class="btn remove__btn">X</button>
-            <button class="btn done__btn">DONE</button>
+            <button class="btn list-area__btn--remove">X</button>
+            <button class="btn list-area__btn--done">DONE</button>
         </li>
       `;
   }
